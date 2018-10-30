@@ -25,6 +25,10 @@ class ExamplePureComponent extends React.PureComponent {
 
 const ExampleStateless = () => <div>Component: stateless</div>;
 
+const ExamplePureStateless = React.memo(() => (
+  <div>Component: pure stateless</div>
+));
+
 // ----------------------------------------
 // Runner
 // ----------------------------------------
@@ -101,6 +105,7 @@ const components = [
   {name: 'Component', element: ExampleComponent},
   {name: 'Component (pure)', element: ExamplePureComponent},
   {name: 'Stateless', element: ExampleStateless},
+  {name: 'Stateless (pure)', element: ExamplePureStateless},
 ];
 const timings = {};
 
